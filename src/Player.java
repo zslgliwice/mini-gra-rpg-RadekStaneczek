@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-import src.*;
+
 
 public class Player {
     int hp = 100;
@@ -49,11 +49,17 @@ public class Player {
         }
     }
 
+    void Equip(Object Item)
+    {
+        if(Item instanceof weapon) {
+            dmg = base_dmg + ((weapon) Item).getDmg();
+        }
     void Equip(item Item)
     {
         if(Item instanceof weapon)
         {
-            dmg = base_dmg + Item.getDmg();
+            dmg = base_dmg + ((weapon)Item).getDmg();
+
         }
     }
 }
