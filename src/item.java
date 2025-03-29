@@ -20,5 +20,9 @@ class weapon extends item
         super(name,desc);
         this.dmg = dmg;
     }
+    public int getDmg() {
+        return dmg;
+    }
+
 }
 

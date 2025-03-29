@@ -1,11 +1,13 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import src.*;
 
 public class Player {
     int hp = 100;
     int gold = 10;
 
     int base_dmg = 5;
+    int dmg = base_dmg;
 
     int exp = 0;
     int lvl = 1;
@@ -49,6 +51,9 @@ public class Player {
 
     void Equip(item Item)
     {
-
+        if(Item instanceof weapon)
+        {
+            dmg = base_dmg + Item.getDmg();
+        }
     }
 }
