@@ -1,2 +1,0 @@
-Miecz;Perfekcyjna broń na bliskie dystanse;20
-Łuk; Broń na dalekie dystanse;10
