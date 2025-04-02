@@ -13,16 +13,21 @@ public class Event
 }
 class Fight extends Event
 {
-
+    Fight()
+    {
+        super("Fight");
+    }
 }
 class Shop extends Event
 {
-    ArrayList<item> avaiable_items = new ArrayList();
+    ArrayList<item> available_items = new ArrayList();
+    ArrayList<Integer> prices= new ArrayList();
     itemHandler Handler = new itemHandler();
     public Shop() throws FileNotFoundException {
-        super();
+        super("sklep");
         System.out.println("Witaj w sklepie");
         ShowAvItems();
+        System.out.println("Chcesz kupić jakiś przedmiot");
     }
     void ShowAvItems()
     {
@@ -31,18 +36,22 @@ class Shop extends Event
 
         for(int i = 0; i < 3; i++)
         {
-            avaiable_items.add(Randomized.get((int)Math.floor(Math.random() * 3)));
+            available_items.add(Randomized.get((int)Math.floor(Math.random() * 3)));
+            prices.add((int)Math.floor(Math.random()*40 + 10));
         }
-        for(item i : avaiable_items)
+        for(int i = 0; i < available_items.size(); i++)
         {
-            i.WriteInfo();
+            available_items.get(i).WriteInfo();
+            System.out.println("\tCena:" + prices.get(i) + " złota");
         }
+
+
     }
-    void Buy()
+    void Buy(Player player)
     {
 
     }
-    void Sell()
+    void Sell(Player player)
     {
 
     }
@@ -50,5 +59,8 @@ class Shop extends Event
 }
 class Oboz extends Event
 {
-
+    Oboz()
+    {
+        super("Oboz");
+    }
 }
