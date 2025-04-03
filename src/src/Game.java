@@ -1,25 +1,22 @@
 package src;
 
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Game {
     static Player Player = new Player();
     static boolean escaped = false;
     static Scanner sc = new Scanner(System.in);
-    static Shop shop;
+    static ArrayList<Event> events = new ArrayList<>();
 
-    static {
-        try {
-            shop = new Shop();
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        }
+    EventHandler eventHandler = new EventHandler();
+
+    public Game() throws FileNotFoundException {
     }
 
     public static void Play() throws Exception {
         System.out.println("Witaj w tajemniczym lesie");
-        shop.ShowAvItems();
         do {
             WriteInfo();
             String input = sc.nextLine();

@@ -47,6 +47,9 @@ class Shop extends Event
         ArrayList<item> Randomized = new ArrayList<>();
         Randomized.addAll(Handler.getItems());
 
+        available_items.clear();
+        prices.clear();
+
         for(int i = 0; i < 3; i++)
         {
             available_items.add(Randomized.get((int)Math.floor(Math.random() * 3)));
