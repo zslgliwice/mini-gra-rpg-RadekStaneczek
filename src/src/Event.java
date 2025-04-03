@@ -5,17 +5,25 @@ import java.util.ArrayList;
 
 public class Event
 {
-    Event(String name)
+    public Event()
     {
 
-        System.out.println("Napotkałeś " + name);
+    }
+    void Routine()
+    {
+
     }
 }
 class Fight extends Event
 {
     Fight()
     {
-        super("Fight");
+        super();
+    }
+
+    @Override
+    void Routine() {
+        super.Routine();
     }
 }
 class Shop extends Event
@@ -23,11 +31,16 @@ class Shop extends Event
     ArrayList<item> available_items = new ArrayList();
     ArrayList<Integer> prices= new ArrayList();
     itemHandler Handler = new itemHandler();
-    public Shop() throws FileNotFoundException {
-        super("sklep");
+
+    Shop() throws FileNotFoundException {
+        super();
+    }
+
+    public void Routine() {
+
         System.out.println("Witaj w sklepie");
         ShowAvItems();
-        System.out.println("Chcesz kupić jakiś przedmiot");
+        System.out.println("Chcesz kupić jakiś przedmiot?\n1.Tak\n2.Nie");
     }
     void ShowAvItems()
     {
@@ -61,6 +74,11 @@ class Oboz extends Event
 {
     Oboz()
     {
-        super("Oboz");
+        super();
+    }
+
+    @Override
+    void Routine() {
+        super.Routine();
     }
 }
