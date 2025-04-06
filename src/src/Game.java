@@ -20,7 +20,10 @@ public class Game {
         do {
             WriteInfo();
             String input = sc.nextLine();
-            if(input.equals("1")){}
+            if(input.equals("1")){
+                Shop shop = new Shop(Player);
+                shop.Routine();
+            }
             else if(input.equals("2")){
                 try{
                     Player.WriteEq();
