@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class itemHandler {
-   ArrayList<item> Items = new ArrayList<item>();
+    ArrayList<item> Items = new ArrayList<item>();
     File[]Files = {new File("Items/weapons.txt"),new File("Items/items.txt")};
 
     public itemHandler() throws FileNotFoundException {
@@ -25,7 +25,7 @@ public class itemHandler {
             }
             else
             {
-                while (skaner.hasNextLine())
+                while (skaner.hasNextLine());
                 {
                     String data = skaner.nextLine();
                     String Name = data.split(";")[0];

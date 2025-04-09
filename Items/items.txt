@@ -1,1 +1,21 @@
 Magiczny korzeń; Nie wiesz co to jest, ale wygląda dobrze;20
+Mała Mikstura Zdrowia;Niedroga mikstura przywracająca odrobinę sił w walce;15
+Ziołowy Kompres;Naturalny sposób na zatrzymanie krwawienia i delikatne leczenie;10
+Eliksir Spokoju;Przywraca część zdrowia i uspokaja nerwy;20
+Bandaż Wojenny;Szybko nakładany opatrunek do użycia w boju;18
+Sok z Jagód Życia;Egzotyczny napój z odległych dżungli, bogaty w lecznicze właściwości;25
+Mikstura Odnowy;Średniej klasy eliksir przywracający sporo punktów życia;30
+Herbata Uzdrowiciela;Ciepły napój przywracający zdrowie i morale;12
+Krem Regeneracyjny;Stosowany miejscowo, działa powoli ale skutecznie;22
+Kieł Wiecznego Wilka;Amulet jednorazowego użytku, który automatycznie leczy w kryzysie;35
+Zastrzyk Adrenaliny;Szybka dawka energii i natychmiastowa regeneracja ciała;28
+Kanapka z Wieprzowiną;Solidny posiłek polowy, który przywraca zdrowie i siły witalne;16
+Pigułka Odporności;Wzmacnia organizm i regeneruje część utraconych punktów życia;14
+Miód Leśnych Duchów;Słodki i lepki, działa błyskawicznie na rany;26
+Eliksir Świtu;Lśniący płyn, który daje uczucie odrodzenia;40
+Maść Kapłanki;Ręcznie przygotowana maść z ziół świętych;19
+Suchar Przetrwania;Nie smakuje najlepiej, ale daje organizmowi potrzebną energię;11
+Napój Energetyczny;Krótki zastrzyk sił i poprawa zdrowia;13
+Olej Feniksa;Rzadki i drogi olejek, który regeneruje ciało i duszę;38
+Amulet Leczenia;Jednorazowo aktywowany amulet przywracający zdrowie;33
+Zupa Mocy;Pożywna zupa z mięsem i warzywami, przywraca zdrowie i morale;21

@@ -2,6 +2,7 @@ package src;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Game {
@@ -10,19 +11,24 @@ public class Game {
     static Scanner sc = new Scanner(System.in);
     static ArrayList<Event> events = new ArrayList<>();
 
-    EventHandler eventHandler = new EventHandler();
+    static EventHandler eventHandler;
 
     public Game() throws FileNotFoundException {
     }
 
     public static void Play() throws Exception {
+        events.addAll(List.of(new Event[]{new Shop(Player), new Fight(Player), new Oboz(Player)}));
+        eventHandler = new EventHandler(events);
         System.out.println("Witaj w tajemniczym lesie");
         do {
             WriteInfo();
             String input = sc.nextLine();
             if(input.equals("1")){
-                Shop shop = new Shop(Player);
-                shop.Routine();
+                try {
+                    eventHandler.Randomize();
+                }catch (Exception e) {
+                    System.out.println(e.getMessage());
+                }
             }
             else if(input.equals("2")){
                 try{

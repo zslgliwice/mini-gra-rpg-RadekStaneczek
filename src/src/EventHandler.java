@@ -7,9 +7,16 @@ import java.util.Scanner;
 
 public class EventHandler {
     ArrayList<Event> events = new ArrayList<>();
-    static File file = new File("events.txt");
-    void Randomize()
+    EventHandler(ArrayList<Event> events)
     {
-        events.get((int)Math.floor(Math.random() * events.size())).Routine();
+        this.events.addAll(events);
+    }
+    void Randomize() throws Exception{
+        try {
+            events.get((int) Math.floor(Math.random() * events.size())).Routine();
+        }catch(Exception e)
+        {
+            throw e;
+        }
     }
 }

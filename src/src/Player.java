@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class Player {
         int hp = 100;
+        int max_hp = 100;
         int gold = 10;
 
         int base_dmg = 5;
@@ -64,6 +65,14 @@ public class Player {
         void Equip(Object Item) {
             if (Item instanceof weapon) {
                 dmg = base_dmg + ((weapon) Item).getDmg();
+            }
+            else if(Item instanceof usable)
+            {
+                hp += ((usable) Item).getHp();
+                if(hp > max_hp)
+                {
+                    hp = max_hp;
+                }
             }
         }
 

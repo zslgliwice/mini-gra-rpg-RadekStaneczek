@@ -10,20 +10,20 @@ public class Event
     {
 
     }
-    void Routine()
+    void Routine() throws Exception
     {
-
+        System.out.println("Napotkałeś " + this.getClass().getName().split("\\.")[1]);
     }
 }
 class Fight extends Event
 {
-    Fight()
+    Fight(Player player)
     {
-        super();
+        System.out.println("Napotkałeś ");
     }
 
     @Override
-    void Routine() {
+    void Routine() throws  Exception {
         super.Routine();
     }
 }
@@ -39,7 +39,7 @@ class Shop extends Event
         this.player = player;
     }
     @Override
-    public void Routine() {
+    public void Routine() throws Exception{
         System.out.println("Witaj w sklepie\nRozejrzyj sie, może znajdziesz coś ciekawego.");
         ShowAvItems();
         System.out.println("Chcesz kupić jakiś przedmiot?\n1.Tak\n2.Nie\n3.Nie,chce sprzedać");
@@ -48,7 +48,15 @@ class Shop extends Event
             case 1:
                 System.out.println("Jaki?(Podaj numer)");
                 input = sc.nextInt();
-                Buy(input);
+                if(player.getGold() > prices.get(input-1))
+                {
+                    Buy(input);
+                    player.setGold(player.getGold()-prices.remove(input-1));
+                }
+                else
+                {
+                    throw new Exception("Nie masz wystarczająco złota");
+                }
                 break;
             case 2:
                 break;
@@ -75,8 +83,8 @@ class Shop extends Event
 
         for(int i = 0; i < 3; i++)
         {
-            available_items.add(Randomized.get((int)Math.floor(Math.random() * 3)));
-            prices.add((int)Math.floor(Math.random()*25 + 1));
+            available_items.add(Randomized.get((int)Math.floor(Math.random() * Randomized.size())));
+            prices.add((int)Math.floor(Math.random()*30 + 1));
         }
         for(int i = 0; i < available_items.size(); i++)
         {
@@ -94,19 +102,20 @@ class Shop extends Event
     }
     void Sell(int item_index)
     {
+        int given_gold = (int)Math.floor(Math.random() * 30 + 10);
         player.DeleteItemFromEq(item_index-1);
+        player.setGold(player.getGold() + given_gold);
+        System.out.println("Dostałeś " + Integer.toString(given_gold) + " złota");
     }
 
 }
 class Oboz extends Event
 {
-    Oboz()
-    {
+    Oboz(Player player) {
         super();
     }
-
-    @Override
-    void Routine() {
+    void Routine() throws Exception{
         super.Routine();
+
     }
 }

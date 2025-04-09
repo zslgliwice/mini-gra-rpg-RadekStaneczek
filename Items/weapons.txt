@@ -1,2 +1,22 @@
 Miecz;Perfekcyjna broń na bliskie dystanse;20
 Łuk;Broń na dalekie dystanse;10
+Sztylet Zdrady;Ulubiona broń skrytobójców, zadaje podwójne obrażenia od tyłu;35
+Kusza Cierni;Strzela bełtami pokrytymi trucizną, która paraliżuje cel;38
+Karwasze Ognia;Para rękawic wystrzeliwujących płomienie na krótkim dystansie;30
+Toporek Myśliwego;Idealny do rzucania i polowań, bardzo celny na krótkim dystansie;28
+Maczeta Dżungli;Przetrwała niejedną wyprawę, z łatwością przecina roślinność i przeciwników;36
+Pałka Porządku;Używana przez straż miejską, ogłusza bez śmiertelnych obrażeń;20
+Łańcuch Piekielny;Ognisty łańcuch, który potrafi przyciągać wrogów do użytkownika;34
+Noże Chaosu;Para wirujących ostrzy, których tor lotu jest nieprzewidywalny;33
+Łuk Cienia;Cichy łuk o zwiększonej celności w ciemności;32
+Sztylet Mgły;Lekki i szybki, utrudnia przewidzenie ruchu;26
+Kostur Iluzji;Tworzy zwodnicze obrazy przy każdym zamachu;19
+Miecz Trucizny;Z każdym trafieniem osłabia cel coraz bardziej;37
+Włócznia Myśliwego;Popularna wśród plemion, łatwa w użyciu i skuteczna;29
+Maczuga Starożytna;Ciężka, ale dobrze wyważona broń wykonana z nieznanego metalu;31
+Łuk Łowcy;Zaprojektowany do szybkiego strzelania, ma mniejszą moc, ale dużą celność;25
+Kij Podróżnika;Wzmocniony magicznie do samoobrony, idealny dla magów;18
+Szabla Strażnika;Lekka broń używana przez miejskich wartowników;27
+Rękawice Lodu;Zadają obrażenia chłodem i spowalniają przeciwników;24
+Krótki Miecz Najemnika;Solidna broń bez ozdób, ale bardzo funkcjonalna;30
+Miotacz Piasku;Rozpyla chmurę pyłu, która zadaje lekkie obrażenia i oślepia;17

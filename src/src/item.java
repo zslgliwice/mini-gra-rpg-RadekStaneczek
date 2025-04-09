@@ -25,7 +25,7 @@ class weapon extends item
     @Override
     void WriteInfo() {
         super.WriteInfo();
-        System.out.println("\t" + dmg);
+        System.out.println("\t" + dmg + " dmg");
     }
 
     public int getDmg() {
@@ -43,7 +43,7 @@ class usable extends item
     @Override
     void WriteInfo() {
         super.WriteInfo();
-        System.out.println("\t" + hp);
+        System.out.println("\tDodaje " + hp + " hp");
     }
     public int getHp() {
         return hp;
