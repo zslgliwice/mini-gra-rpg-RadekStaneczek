@@ -1,4 +1,4 @@
-Magiczny korzeń; Nie wiesz co to jest, ale wygląda dobrze;20
+Magiczny korzeń;Nie wiesz co to jest, ale wygląda dobrze;20
 Mała Mikstura Zdrowia;Niedroga mikstura przywracająca odrobinę sił w walce;15
 Ziołowy Kompres;Naturalny sposób na zatrzymanie krwawienia i delikatne leczenie;10
 Eliksir Spokoju;Przywraca część zdrowia i uspokaja nerwy;20

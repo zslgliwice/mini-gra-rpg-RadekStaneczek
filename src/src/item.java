@@ -1,6 +1,6 @@
 package src;
-public class item
-{
+
+public class item {
     String name;
     String desc;
 
@@ -14,11 +14,12 @@ public class item
         System.out.println("\t" + desc);
     }
 }
-class weapon extends item
-{
+
+class weapon extends item {
     int dmg;
-    weapon(String name,String desc,int dmg) {
-        super(name,desc);
+
+    weapon(String name, String desc, int dmg) {
+        super(name, desc);
         this.dmg = dmg;
     }
 
@@ -33,18 +34,21 @@ class weapon extends item
     }
 
 }
-class usable extends item
-{
+
+class usable extends item {
     int hp;
-    usable(String name,String desc,int hp) {
-        super(name,desc);
+
+    usable(String name, String desc, int hp) {
+        super(name, desc);
         this.hp = hp;
     }
+
     @Override
     void WriteInfo() {
         super.WriteInfo();
         System.out.println("\tDodaje " + hp + " hp");
     }
+
     public int getHp() {
         return hp;
     }

@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="311c4177-826c-42ec-a847-907cc11b37d8" name="Changes" comment="changes">
-      <change afterPath="$PROJECT_DIR$/src/src/Enemy.java" afterDir="false" />
+    <list default="true" id="311c4177-826c-42ec-a847-907cc11b37d8" name="Changes" comment="Repaired glitch with shop&#10;Class Oboz now has implemented interactions with player">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Items/items.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Items/items.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Items/weapons.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Items/weapons.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Event.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/EventHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Game.java" afterDir="false" />
@@ -44,6 +45,9 @@
     &quot;accountId&quot;: &quot;2b7fe4cb-e72a-424f-aca4-8dc3639a9c4a&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 7
@@ -80,6 +84,20 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="RPG" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -108,6 +126,9 @@
       <workItem from="1744140758133" duration="2094000" />
       <workItem from="1744223299719" duration="2127000" />
       <workItem from="1744231690884" duration="1652000" />
+      <workItem from="1744323203130" duration="2654000" />
+      <workItem from="1744325866795" duration="823000" />
+      <workItem from="1744398433140" duration="2393000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -194,6 +215,7 @@
     <MESSAGE value="Shop works now" />
     <MESSAGE value="Implemented shop mechanics&#10;-Randomized items&#10;-Randomized prices in range 10-50" />
     <MESSAGE value="changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes" />
+    <MESSAGE value="Repaired glitch with shop&#10;Class Oboz now has implemented interactions with player" />
+    <option name="LAST_COMMIT_MESSAGE" value="Repaired glitch with shop&#10;Class Oboz now has implemented interactions with player" />
   </component>
 </project>
