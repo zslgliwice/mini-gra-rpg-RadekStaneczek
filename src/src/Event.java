@@ -49,7 +49,7 @@ class Shop extends Event {
             case 1:
                 System.out.println("Jaki?(Podaj numer)");
                 input = sc.nextInt();
-                if (player.getGold() > prices.get(input - 1)) {
+                if (player.getGold() >= prices.get(input - 1)) {
                     Buy(input);
                 } else {
                     throw new Exception("Nie masz wystarczająco złota");

@@ -6,16 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="311c4177-826c-42ec-a847-907cc11b37d8" name="Changes" comment="Repaired glitch with shop&#10;Class Oboz now has implemented interactions with player">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Items/items.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Items/items.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/EventHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/itemHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/itemHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +122,8 @@
       <workItem from="1744323203130" duration="2654000" />
       <workItem from="1744325866795" duration="823000" />
       <workItem from="1744398433140" duration="2393000" />
+      <workItem from="1744452241104" duration="1977000" />
+      <workItem from="1744569738889" duration="3674000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />

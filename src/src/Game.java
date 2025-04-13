@@ -27,6 +27,7 @@ public class Game {
         eventHandler = new EventHandler(events);
         System.out.println("Witaj w tajemniczym lesie");
         do{
+            player.checkLvlUp();
             WriteInfo();
             String input = sc.nextLine();
             if (input.equals("1")) {

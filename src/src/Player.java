@@ -12,11 +12,13 @@ public class Player {
     int base_dmg = 5;
     int dmg = base_dmg;
 
-    int exp = 0;
+    int exp = 1000;
     int lvl = 1;
 
     static Scanner scanner = new Scanner(System.in);
     static ArrayList<item> equipment = new ArrayList<>();
+
+
 
     public int getHp() {
         return hp;
@@ -79,9 +81,39 @@ public class Player {
 
         }
     }
+    public void checkLvlUp() {
+        if (exp >= (lvl+1) * 1000) {
+            exp = exp - ((lvl + 1) * 1000);
+            lvl += 1;
+            max_hp += 10;
+            hp = max_hp;
+            base_dmg = lvl * base_dmg;
+            System.out.println("Masz teraz " + lvl + " poziom");
+        }
 
+    }
     public String getStats() {
-        return "Hp:" + hp + " | Gold:" + gold + " | Atak:" + dmg;
+        return "Poziom: " + lvl + " | Hp:" + hp + " | Gold:" + gold + " | Atak:" + dmg + " | Exp:[" + WriteExpBar(20) + "]" ;
+    }
+
+    private String WriteExpBar(int MaxBars)
+    {
+        String expBar = "";
+
+        int NextLevel = lvl +1;
+        int BarCount = (int) Math.floor((double)exp/(NextLevel*1000)*MaxBars);
+
+        for (int i = 0; i < MaxBars; i++) {
+
+            if(i < BarCount) {
+                expBar += "█";
+            }
+            else{
+                expBar += "X";
+            }
+
+        }
+        return expBar;
     }
 
     public void setHp(int hp) {
