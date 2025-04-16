@@ -6,8 +6,8 @@ public class Enemy {
     int dmg;
 
     Enemy(int hp, int dmg, String name) {
-        this.hp = (int) Math.floor(Math.random() * 80 + 20);
-        this.dmg = (int) Math.floor(Math.random() * 20 + 8);
+        this.hp = hp;
+        this.dmg = dmg;
         this.name = name;
     }
 

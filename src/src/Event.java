@@ -27,7 +27,7 @@ class Fight extends Event {
 
     @Override
     void Routine() throws Exception {
-        enemy = new Enemy((int) (Math.random() * 15 + 15), (int) (Math.random() * 10 + 5), names.get((int) (Math.random() * names.size())));
+        enemy = new Enemy((int)(Math.random() * 15 + 15), (int) (Math.random() * 10 + 5), names.get((int) (Math.random() * names.size())));
         int input;
         System.out.println("Napotkałeś " + enemy.getName() + "a");
         AtkHandler = new AttackHandler(enemy, player);
@@ -55,8 +55,12 @@ class Fight extends Event {
                 AtkHandler.Attack(1);
             }
         } while (enemy.getHp() > 0 && player.getHp() > 0);
+        if (player.getHp() <= 0) {
+            System.out.println("\nZginąłeś");
+            System.exit(0);
+        }
         if (enemy.getHp() <= 0) {
-            int expGiven = (int) Math.random() * 500 + 250;
+            int expGiven = (int) (Math.random() * 500 + 250);
             player.setExp(player.getExp() + expGiven);
             System.out.println("Dostałeś " + expGiven + " expa");
         }
@@ -179,4 +183,26 @@ class Oboz extends Event {
 
     }
 }
+class Skarb extends Event {
+    Player player;
+    Skarb(Player player)
+    {
+        this.player = player;
+    }
+    @Override
+    void Routine()
+    {
+        int receivedGold = (int)(Math.random() * 15 + 5);
+        System.out.println("Znalazłeś skarb,w którym było " + receivedGold + " golda");
+        player.setGold(player.getGold() + receivedGold);
+    }
+}
+class Ucieczka extends Event {
 
+    @Override
+    void Routine()
+    {
+        System.out.println("Gratulacje udało ci sie uciec");
+        System.exit(0);
+    }
+}

@@ -7,10 +7,9 @@ import java.util.Scanner;
 
 public class Game {
     static Player player = new Player();
-    static boolean escaped = false;
     static Scanner sc = new Scanner(System.in);
     static ArrayList<Event> events = new ArrayList<>();
-
+    static boolean escaped = false;
     static EventHandler eventHandler;
 
     public static void Play() throws FileNotFoundException {
@@ -20,9 +19,10 @@ public class Game {
             events.addAll(List.of(
                     new Shop(player),
                     new Oboz(player),
-                    new Fight(player)));
-                    new Oboz(player);
-            probabilities.addAll(List.of(20, 30, 40, 10));
+                    new Fight(player),
+                    new Skarb(player),
+                    new Ucieczka()));
+            probabilities.addAll(List.of(25, 20, 25, 20, 10));
         }
         catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -52,7 +52,7 @@ public class Game {
                 System.out.println("Nie ma takiej opcji");
             }
         }
-        while (player.getHp() > 0);
+        while (player.getHp() > 0 || escaped == false);
     }
 
     public static void WriteInfo() {

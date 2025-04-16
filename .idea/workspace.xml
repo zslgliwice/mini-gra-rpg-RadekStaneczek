@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="311c4177-826c-42ec-a847-907cc11b37d8" name="Changes" comment="Added escaping from fight">
+    <list default="true" id="311c4177-826c-42ec-a847-907cc11b37d8" name="Changes" comment="Probability kinda works">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/EventHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +127,7 @@
       <workItem from="1744619515573" duration="661000" />
       <workItem from="1744620589738" duration="727000" />
       <workItem from="1744624813708" duration="801000" />
-      <workItem from="1744827481549" duration="4229000" />
+      <workItem from="1744827481549" duration="5987000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -194,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744829190442</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Probability kinda works">
+      <option name="closed" value="true" />
+      <created>1744832156647</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1744832156647</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +241,18 @@
     <MESSAGE value="Repaired glitch with shop&#10;Class Oboz now has implemented interactions with player" />
     <MESSAGE value="Added basic fight behaviour" />
     <MESSAGE value="Added escaping from fight" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added escaping from fight" />
+    <MESSAGE value="Probability kinda works" />
+    <option name="LAST_COMMIT_MESSAGE" value="Probability kinda works" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/src/Event.java</url>
+          <line>167</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
