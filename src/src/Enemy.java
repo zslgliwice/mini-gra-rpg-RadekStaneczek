@@ -11,13 +11,27 @@ public class Enemy {
         this.name = name;
     }
 
-    void Attack(Player p) {
-        int critChance = (int) Math.floor(Math.random() * 100 + 1);
-        int dmgGiven = dmg;
-        if (critChance < 25) {
-            dmgGiven *= 2;
-        }
-        System.out.println(this.name + " zaatakował cie i zadał " + dmgGiven);
-        p.setHp(p.getHp() - dmgGiven);
+    public int getHp() {
+        return hp;
+    }
+
+    public void setHp(int hp) {
+        this.hp = hp;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getDmg() {
+        return dmg;
+    }
+
+    public void setDmg(int dmg) {
+        this.dmg = dmg;
     }
 }

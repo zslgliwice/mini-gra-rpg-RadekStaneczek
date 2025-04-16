@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="311c4177-826c-42ec-a847-907cc11b37d8" name="Changes" comment="Repaired glitch with shop&#10;Class Oboz now has implemented interactions with player">
+      <change afterPath="$PROJECT_DIR$/src/src/AttackHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -124,6 +125,10 @@
       <workItem from="1744398433140" duration="2393000" />
       <workItem from="1744452241104" duration="1977000" />
       <workItem from="1744569738889" duration="3674000" />
+      <workItem from="1744619515573" duration="661000" />
+      <workItem from="1744620589738" duration="727000" />
+      <workItem from="1744624813708" duration="801000" />
+      <workItem from="1744827481549" duration="1299000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />

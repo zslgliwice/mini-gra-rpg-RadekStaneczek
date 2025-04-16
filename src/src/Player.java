@@ -135,4 +135,12 @@ public class Player {
     public void setBase_dmg(int base_dmg) {
         this.base_dmg = base_dmg;
     }
+
+    public int getDmg() {
+        return dmg;
+    }
+
+    public void setDmg(int dmg) {
+        this.dmg = dmg;
+    }
 }

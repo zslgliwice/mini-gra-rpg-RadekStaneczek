@@ -12,16 +12,42 @@ public class Event {
 
 class Fight extends Event {
     Player player;
+    static Enemy enemy;
+    static ArrayList<String> names = new ArrayList<>();
+    static Scanner sc = new Scanner(System.in);
+    AttackHandler AtkHandler;
+
     Fight(Player player) {
         this.player = player;
+        names.add("Wilk");
+        names.add("Goblin");
+        names.add("Drzewiec");
+        names.add("Krasnal");
     }
 
     @Override
     void Routine() throws Exception {
-
+        enemy = new Enemy((int) Math.random() * 15 + 15, (int) Math.random() * 15 + 5, names.get((int) Math.random() * names.size()));
+        int input;
+        System.out.println("Napotkałeś " + enemy.getName() + "a");
+        AtkHandler = new AttackHandler(enemy,player);
+        do {
+            System.out.println("Co chcesz zrobić?\n1.Zaatakować\n2.Użyć przedmiotu\n3.Uciec");
+            input = sc.nextInt();
+            switch (input) {
+                case 1:
+                    AtkHandler.Attack(2);
+                    break;
+                case 2:
+                    player.WriteEq();
+                    break;
+                case 3:
+                    break;
+            }
+            AtkHandler.Attack(1);
+        } while (enemy.getHp() > 0 && player.getHp() > 0);
     }
 }
-
 class Shop extends Event {
     ArrayList<item> available_items = new ArrayList<>();
     ArrayList<Integer> prices = new ArrayList<>();
@@ -139,3 +165,4 @@ class Oboz extends Event {
 
     }
 }
+
