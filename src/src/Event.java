@@ -42,9 +42,20 @@ class Fight extends Event {
                     player.WriteEq();
                     break;
                 case 3:
+                    if(Math.random() < 0.25) {
+                        System.out.println("Udało ci sie uciec");
+                        enemy.setHp(0);
+                        break;
+                    }
+                    else{
+                        System.out.println("Nie udało ci sie uciec");
+                    }
                     break;
             }
-            AtkHandler.Attack(1);
+            if(enemy.getHp() > 0)
+            {
+                AtkHandler.Attack(1);
+            }
         } while (enemy.getHp() > 0 && player.getHp() > 0);
     }
 }
