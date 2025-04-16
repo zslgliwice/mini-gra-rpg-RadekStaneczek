@@ -15,16 +15,20 @@ public class Game {
 
     public static void Play() throws FileNotFoundException {
         events = new ArrayList<>();
-        try{
-        events.addAll(List.of(
-                new Shop(player),
-                new Oboz(player),
-                new Fight(player)));}
+        ArrayList<Integer> probabilities = new ArrayList<>();
+        try {
+            events.addAll(List.of(
+                    new Shop(player),
+                    new Oboz(player),
+                    new Fight(player)));
+                    new Oboz(player);
+            probabilities.addAll(List.of(20, 30, 40, 10));
+        }
         catch (FileNotFoundException e) {
             e.printStackTrace();
             System.out.println(e.getMessage());
         }
-        eventHandler = new EventHandler(events);
+        eventHandler = new EventHandler(events,probabilities);
         System.out.println("Witaj w tajemniczym lesie");
         do{
             player.checkLvlUp();

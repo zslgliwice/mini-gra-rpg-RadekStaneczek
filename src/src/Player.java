@@ -12,7 +12,7 @@ public class Player {
     int base_dmg = 5;
     int dmg = base_dmg;
 
-    int exp = 1000;
+    int exp = 0;
     int lvl = 1;
 
     static Scanner scanner = new Scanner(System.in);
@@ -142,5 +142,13 @@ public class Player {
 
     public void setDmg(int dmg) {
         this.dmg = dmg;
+    }
+
+    public void setExp(int exp) {
+        this.exp = exp;
+    }
+
+    public int getExp() {
+        return exp;
     }
 }

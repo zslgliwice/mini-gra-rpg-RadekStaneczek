@@ -21,16 +21,16 @@ class Fight extends Event {
         this.player = player;
         names.add("Wilk");
         names.add("Goblin");
-        names.add("Drzewiec");
+        names.add("Drzewc");
         names.add("Krasnal");
     }
 
     @Override
     void Routine() throws Exception {
-        enemy = new Enemy((int) Math.random() * 15 + 15, (int) Math.random() * 15 + 5, names.get((int) Math.random() * names.size()));
+        enemy = new Enemy((int) (Math.random() * 15 + 15), (int) (Math.random() * 10 + 5), names.get((int) (Math.random() * names.size())));
         int input;
         System.out.println("Napotkałeś " + enemy.getName() + "a");
-        AtkHandler = new AttackHandler(enemy,player);
+        AtkHandler = new AttackHandler(enemy, player);
         do {
             System.out.println("Co chcesz zrobić?\n1.Zaatakować\n2.Użyć przedmiotu\n3.Uciec");
             input = sc.nextInt();
@@ -42,21 +42,24 @@ class Fight extends Event {
                     player.WriteEq();
                     break;
                 case 3:
-                    if(Math.random() < 0.25) {
+                    if (Math.random() < 0.25) {
                         System.out.println("Udało ci sie uciec");
                         enemy.setHp(0);
                         break;
-                    }
-                    else{
+                    } else {
                         System.out.println("Nie udało ci sie uciec");
                     }
                     break;
             }
-            if(enemy.getHp() > 0)
-            {
+            if (enemy.getHp() > 0) {
                 AtkHandler.Attack(1);
             }
         } while (enemy.getHp() > 0 && player.getHp() > 0);
+        if (enemy.getHp() <= 0) {
+            int expGiven = (int) Math.random() * 500 + 250;
+            player.setExp(player.getExp() + expGiven);
+            System.out.println("Dostałeś " + expGiven + " expa");
+        }
     }
 }
 class Shop extends Event {
