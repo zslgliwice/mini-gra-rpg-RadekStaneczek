@@ -1,6 +1,7 @@
 package src;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -19,17 +20,17 @@ class Fight extends Event {
 
     Fight(Player player) {
         this.player = player;
-        names.add("Wilk");
-        names.add("Goblin");
-        names.add("Drzewc");
-        names.add("Krasnal");
+        names.add("Wilka");
+        names.add("Goblina");
+        names.add("Drzewca");
+        names.add("Krasnala");
     }
 
     @Override
     void Routine() throws Exception {
         enemy = new Enemy((int)(Math.random() * 15 + 15), (int) (Math.random() * 10 + 5), names.get((int) (Math.random() * names.size())));
         int input;
-        System.out.println("Napotkałeś " + enemy.getName() + "a");
+        System.out.println("Napotkałeś " + enemy.getName());
         AtkHandler = new AttackHandler(enemy, player);
         do {
             System.out.println("Co chcesz zrobić?\n1.Zaatakować\n2.Użyć przedmiotu\n3.Uciec");
@@ -123,7 +124,7 @@ class Shop extends Event {
 
         for (int i = 0; i < 3; i++) {
             available_items.add(Randomized.get((int) Math.floor(Math.random() * Randomized.size())));
-            prices.add((int) Math.floor(Math.random() * 30 + 1));
+            prices.add((int) Math.floor(Math.random() * 30 + 7));
         }
         for (int i = 0; i < available_items.size(); i++) {
             System.out.println(Integer.toString(i + 1) + ".");
@@ -142,6 +143,7 @@ class Shop extends Event {
     void Sell(int item_index) {
         int given_gold = (int) Math.floor(Math.random() * 30 + 10);
         player.DeleteItemFromEq(item_index - 1);
+        player.setDmg(player.getDmg());
         player.setGold(player.getGold() + given_gold);
         System.out.println("Dostałeś " + Integer.toString(given_gold) + " złota");
     }
@@ -165,7 +167,7 @@ class Oboz extends Event {
             input = sc.nextInt();
             switch (input) {
                 case 1:
-                    int randomHp = (int) Math.floor(Math.random() * 20 + 5);
+                    int randomHp = (int)(Math.random() * 20 + 5);
                     player.setHp(player.getHp() + randomHp);
                     if (player.getHp() > player.getMax_hp()) {
                         player.setHp(player.getMax_hp());
@@ -200,9 +202,11 @@ class Skarb extends Event {
 class Ucieczka extends Event {
 
     @Override
-    void Routine()
-    {
+    void Routine(){
         System.out.println("Gratulacje udało ci sie uciec");
+        try {
+            Game.SavePlayer();
+        }catch (Exception e) {}
         System.exit(0);
     }
 }

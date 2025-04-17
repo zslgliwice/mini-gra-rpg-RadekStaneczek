@@ -13,7 +13,6 @@ public class EventHandler {
 
     void Randomize() throws Exception {
         int chance = (int)(Math.random()*100);
-        System.out.println(chance);
         int cumulative = 0;
         for (int i = 0; i < probabilities.size(); i++) {
             cumulative += probabilities.get(i);

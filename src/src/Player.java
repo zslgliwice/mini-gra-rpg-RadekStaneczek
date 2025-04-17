@@ -1,5 +1,7 @@
 package src;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -43,14 +45,9 @@ public class Player {
         equipment.get(index).WriteInfo();
         equipment.remove(index);
     }
-
-    void WriteEq() throws Exception {
-        if (!equipment.isEmpty()) {
-            for (int i = 0; i < equipment.size(); i++) {
-                System.out.println();
-                System.out.print(Integer.toString(i + 1) + ".");
-                equipment.get(i).WriteInfo();
-            }
+    void Equipment() throws Exception{
+        try {
+            WriteEq();
             System.out.print("Czy chcesz wykorzystać item?\n1.Tak\n2.Nie\n\n");
             String in = scanner.nextLine();
             switch (in) {
@@ -64,6 +61,18 @@ public class Player {
                 default:
                     throw new Exception("Nie ma takiej opcji");
 
+            }
+        }catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+    }
+    void WriteEq() throws Exception {
+        if (!equipment.isEmpty()) {
+            for (int i = 0; i < equipment.size(); i++) {
+                System.out.println();
+                System.out.print(Integer.toString(i + 1) + ".");
+                equipment.get(i).WriteInfo();
             }
         } else {
             throw new Exception("Masz pusty ekwipunek");
@@ -92,6 +101,7 @@ public class Player {
         }
 
     }
+    @JsonIgnore
     public String getStats() {
         return "Poziom: " + lvl + " | Hp:" + hp + " | Gold:" + gold + " | Atak:" + dmg + " | Exp:[" + WriteExpBar(20) + "]" ;
     }
