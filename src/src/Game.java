@@ -22,6 +22,7 @@ public class Game {
 
     public static void Play() throws FileNotFoundException {
         SetupEventsAndProbabilities();
+
         System.out.println("Witaj w tajemniczym lesie");
         do{
             System.out.println("\033[H\033[2J");
