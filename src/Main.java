@@ -7,7 +7,7 @@ public class Main {
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) throws FileNotFoundException
     {
-
+        int n;
         do {
             System.out.println("\n|Leśna przygoda|\n");
             System.out.println("1.New Game\n2.Continue\n3.NG+(Startujesz na difficulty 20)\n4.Infinite\n5.Exit");
