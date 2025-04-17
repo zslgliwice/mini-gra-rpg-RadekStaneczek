@@ -1,5 +1,17 @@
 package src;
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+
+@JsonTypeInfo(
+        use = JsonTypeInfo.Id.NAME,
+        include = JsonTypeInfo.As.PROPERTY,
+        property = "type"
+)
+@JsonSubTypes({
+        @JsonSubTypes.Type(value = weapon.class, name = "weapon"),
+        @JsonSubTypes.Type(value = usable.class, name = "usable")
+})
 public class item {
     String name;
     String desc;
@@ -13,6 +25,22 @@ public class item {
         System.out.println("\t" + name);
         System.out.println("\t" + desc);
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
 }
 
 class weapon extends item {
@@ -23,6 +51,7 @@ class weapon extends item {
         this.dmg = dmg;
     }
 
+
     @Override
     void WriteInfo() {
         super.WriteInfo();
@@ -31,6 +60,10 @@ class weapon extends item {
 
     public int getDmg() {
         return dmg;
+    }
+
+    public void setDmg(int dmg) {
+        this.dmg = dmg;
     }
 
 }
@@ -51,6 +84,10 @@ class usable extends item {
 
     public int getHp() {
         return hp;
+    }
+
+    public void setHp(int hp) {
+        this.hp = hp;
     }
 }
 

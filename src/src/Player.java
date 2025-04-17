@@ -1,11 +1,21 @@
 package src;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
+@JsonTypeInfo(
+        use = JsonTypeInfo.Id.NAME,
+        include = JsonTypeInfo.As.PROPERTY,
+        property = "type"
+)
+@JsonSubTypes({
+        @JsonSubTypes.Type(value = weapon.class, name = "weapon"),
+        @JsonSubTypes.Type(value = usable.class, name = "usable")
+})
 public class Player {
     int hp = 100;
     int max_hp = 100;
@@ -160,5 +170,21 @@ public class Player {
 
     public int getExp() {
         return exp;
+    }
+
+    public ArrayList<item> getEquipment() {
+        return equipment;
+    }
+
+    public void setEquipment(ArrayList<item> equipment) {
+        this.equipment = equipment;
+    }
+
+    public int getLvl() {
+        return lvl;
+    }
+
+    public void setLvl(int lvl) {
+        this.lvl = lvl;
     }
 }

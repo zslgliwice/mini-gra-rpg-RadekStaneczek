@@ -1,5 +1,7 @@
 package src;
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
@@ -11,7 +13,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.io.FileWriter;
-
+@JsonTypeInfo(
+        use = JsonTypeInfo.Id.NAME,
+        include = JsonTypeInfo.As.PROPERTY,
+        property = "type"
+)
+@JsonSubTypes({
+        @JsonSubTypes.Type(value = src.weapon.class, name = "weapon"),
+        @JsonSubTypes.Type(value = src.usable.class, name = "usable")
+})
 public class Game {
     static Player player = new Player();
     static Scanner sc = new Scanner(System.in);
@@ -87,5 +97,13 @@ public class Game {
         ObjectMapper mapper = new ObjectMapper();
         File file = new File("Saves/Save.json");
         player = mapper.readValue(file, Player.class);
+    }
+
+    public static int getDifficulty() {
+        return difficulty;
+    }
+
+    public static void setDifficulty(int difficulty) {
+        Game.difficulty = difficulty;
     }
 }

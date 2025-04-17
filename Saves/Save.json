@@ -1,1 +1,1 @@
-{"hp":100,"max_hp":100,"gold":10,"base_dmg":5,"dmg":5,"exp":0}
+{"type":"Player","hp":100,"max_hp":100,"gold":2,"base_dmg":5,"dmg":5,"exp":0,"lvl":1,"equipment":[{"type":"usable","name":"Bandaż Wojenny","desc":"Szybko nakładany opatrunek do użycia w boju","hp":18}]}

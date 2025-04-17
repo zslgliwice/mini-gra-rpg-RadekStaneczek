@@ -28,7 +28,7 @@ class Fight extends Event {
 
     @Override
     void Routine() throws Exception {
-        enemy = new Enemy((int)(Math.random() * 15 + 15), (int) (Math.random() * 10 + 5), names.get((int) (Math.random() * names.size())));
+        enemy = new Enemy((int)(Math.random() * 15 + 15 + Game.getDifficulty()), (int) (Math.random() * 10 + 5 + Game.getDifficulty()), names.get((int) (Math.random() * names.size())));
         int input;
         System.out.println("Napotkałeś " + enemy.getName());
         AtkHandler = new AttackHandler(enemy, player);
@@ -64,6 +64,9 @@ class Fight extends Event {
             int expGiven = (int) (Math.random() * 500 + 250);
             player.setExp(player.getExp() + expGiven);
             System.out.println("Dostałeś " + expGiven + " expa");
+            int GoldGiven = (int) (Math.random() * 10 + 5);
+            player.setGold(player.getGold() + GoldGiven);
+            System.out.println("Dostałeś " + GoldGiven + " golda");
         }
     }
 }
